@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
 
         if (arrayId != 0) {
             TypedArray colors = getResources().obtainTypedArray(arrayId);
-            int index = (int) (Math.random() + colors.length());
+            int index = (int) (Math.random() * colors.length());
             returnColor = colors.getColor(index, Color.GRAY);
             colors.recycle();
         }
