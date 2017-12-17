@@ -29,7 +29,7 @@ import java.util.List;
  * Created by Goro on 17.12.2017.
  */
 
-public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MyViewHolder> {
+public class MessagesAdapter extends RecyclerView.Adapter<MessagesAdapter.MyViewHolder> {
 
     private Context mContext;
     private List<Message> messages;
@@ -40,6 +40,10 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MyViewHo
     private boolean reverseAllAnimations = false;
 
     private static int currentSelectedIndex = -1;
+
+//    public MessagesAdapter(MainActivity mContext, List<android.os.Message> messages, MainActivity listener) {
+//
+//    }
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnLongClickListener {
         public TextView from, subject, message, iconText, timstamp;
@@ -72,7 +76,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MyViewHo
         }
     }
 
-    public MessageAdapter(Context mContext, List<Message> messages, MessageAdapterListener listener) {
+    public MessagesAdapter(Context mContext, List<Message> messages, MessageAdapterListener listener) {
         this.mContext = mContext;
         this.messages = messages;
         this.listener = listener;
